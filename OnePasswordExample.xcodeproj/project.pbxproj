@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3286E93B1B61646F00E15973 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3286E93A1B61646F00E15973 /* SignInViewController.swift */; };
+		3286E93D1B6176C200E15973 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3286E93C1B6176C200E15973 /* RegisterViewController.swift */; };
 		328A79541B615FA20059C027 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328A79531B615FA20059C027 /* AppDelegate.swift */; };
 		328A79591B615FA20059C027 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 328A79571B615FA20059C027 /* Main.storyboard */; };
 		328A795B1B615FA20059C027 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 328A795A1B615FA20059C027 /* Assets.xcassets */; };
@@ -18,6 +19,7 @@
 /* Begin PBXFileReference section */
 		219FB32F6D10F18638B4397C /* Pods-OnePasswordExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnePasswordExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-OnePasswordExample/Pods-OnePasswordExample.release.xcconfig"; sourceTree = "<group>"; };
 		3286E93A1B61646F00E15973 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		3286E93C1B6176C200E15973 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		328A79501B615FA20059C027 /* OnePasswordExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnePasswordExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		328A79531B615FA20059C027 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		328A79581B615FA20059C027 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 			children = (
 				328A79531B615FA20059C027 /* AppDelegate.swift */,
 				3286E93A1B61646F00E15973 /* SignInViewController.swift */,
+				3286E93C1B6176C200E15973 /* RegisterViewController.swift */,
 				328A79571B615FA20059C027 /* Main.storyboard */,
 				328A795C1B615FA20059C027 /* LaunchScreen.storyboard */,
 				328A795A1B615FA20059C027 /* Assets.xcassets */,
@@ -209,6 +212,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3286E93D1B6176C200E15973 /* RegisterViewController.swift in Sources */,
 				3286E93B1B61646F00E15973 /* SignInViewController.swift in Sources */,
 				328A79541B615FA20059C027 /* AppDelegate.swift in Sources */,
 			);

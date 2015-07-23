@@ -1,5 +1,5 @@
 //
-//  SignInViewController.swift
+//  RegisterViewController.swift
 //  OnePasswordExample
 //
 //  Created by Ben Hanzl on 7/23/15.
@@ -9,7 +9,7 @@
 import OnePasswordExtension
 import UIKit
 
-class SignInViewController: UIViewController {
+class RegisterViewController: UIViewController {
 
   @IBOutlet weak var emailTextField: UITextField!
   @IBOutlet weak var passwordTextField: UITextField!
@@ -23,9 +23,21 @@ class SignInViewController: UIViewController {
     onePasswordButton.hidden = !onePasswordAvailable
   }
 
-  @IBAction func populateFieldsFromOnePassword(sender: UIButton) {
-    OnePasswordExtension.sharedExtension().findLoginForURLString("https://izea.com", forViewController: self,
-        sender: sender) { (credentials, error) -> Void in
+  @IBAction func generatePasswordAndSaveInOnePassword(sender: UIButton) {
+    let loginDetails: [String: AnyObject] = [
+      AppExtensionTitleKey: "IZEA",
+      AppExtensionUsernameKey: emailTextField.text!,
+      AppExtensionPasswordKey: passwordTextField.text!
+    ]
+
+    let passwordGenerationOptions: [String: AnyObject] = [
+      AppExtensionGeneratedPasswordMinLengthKey: 10,
+      AppExtensionGeneratedPasswordMaxLengthKey: 100
+    ]
+
+    OnePasswordExtension.sharedExtension().storeLoginForURLString("https://izea.com",
+        loginDetails: loginDetails, passwordGenerationOptions: passwordGenerationOptions,
+        forViewController: self, sender: sender) { (credentials, error) -> Void in
       guard error == nil else {
         print("Error: \(error)")
         return

@@ -54,7 +54,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Sign In" id="Wrd-sZ-LaM">
-                        <barButtonItem key="rightBarButtonItem" title="Sign Up" id="sgf-QA-uUM"/>
+                        <barButtonItem key="rightBarButtonItem" title="Register" id="sgf-QA-uUM">
+                            <connections>
+                                <segue destination="Pvs-H5-DpX" kind="show" id="6U5-aa-rU9"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="emailTextField" destination="GpT-Vk-02V" id="nIq-S7-NoB"/>
@@ -65,6 +69,65 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1072" y="387"/>
+        </scene>
+        <!--Register-->
+        <scene sceneID="FTd-Pj-7aQ">
+            <objects>
+                <viewController id="Pvs-H5-DpX" customClass="RegisterViewController" customModule="OnePasswordExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="UfH-wO-jUB"/>
+                        <viewControllerLayoutGuide type="bottom" id="Wsz-pp-Jx0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="MOc-kk-IWI">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Hi-V8-4bU">
+                                <rect key="frame" x="20" y="104" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ko9-Y8-ZLJ">
+                                <rect key="frame" x="20" y="142" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LHb-He-QfW">
+                                <rect key="frame" x="20" y="180" width="57" height="30"/>
+                                <state key="normal" title="Register"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ckb-da-a3d">
+                                <rect key="frame" x="440" y="180" width="140" height="30"/>
+                                <state key="normal" title="Generate 1Password"/>
+                                <connections>
+                                    <action selector="generatePasswordAndSaveInOnePassword:" destination="Pvs-H5-DpX" eventType="touchUpInside" id="BRe-RY-SS1"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="ko9-Y8-ZLJ" secondAttribute="trailing" id="0nX-dt-abV"/>
+                            <constraint firstItem="LHb-He-QfW" firstAttribute="leading" secondItem="MOc-kk-IWI" secondAttribute="leadingMargin" id="1X4-J8-kZg"/>
+                            <constraint firstItem="ckb-da-a3d" firstAttribute="top" secondItem="ko9-Y8-ZLJ" secondAttribute="bottom" constant="8" id="CZl-Ni-Bqq"/>
+                            <constraint firstItem="0Hi-V8-4bU" firstAttribute="leading" secondItem="MOc-kk-IWI" secondAttribute="leadingMargin" id="Gem-GT-NOP"/>
+                            <constraint firstItem="ko9-Y8-ZLJ" firstAttribute="leading" secondItem="MOc-kk-IWI" secondAttribute="leadingMargin" id="NOs-zv-D0S"/>
+                            <constraint firstItem="ckb-da-a3d" firstAttribute="trailing" secondItem="MOc-kk-IWI" secondAttribute="trailingMargin" id="O0D-ya-Mhu"/>
+                            <constraint firstItem="0Hi-V8-4bU" firstAttribute="top" secondItem="UfH-wO-jUB" secondAttribute="bottom" constant="40" id="Q9I-am-Mt4"/>
+                            <constraint firstItem="LHb-He-QfW" firstAttribute="top" secondItem="ko9-Y8-ZLJ" secondAttribute="bottom" constant="8" id="Xs9-fN-ct8"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="0Hi-V8-4bU" secondAttribute="trailing" id="mYO-gl-s16"/>
+                            <constraint firstItem="ko9-Y8-ZLJ" firstAttribute="top" secondItem="0Hi-V8-4bU" secondAttribute="bottom" constant="8" id="myS-Bo-vZz"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Register" id="uet-5b-4vm"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="0Hi-V8-4bU" id="kit-Dm-DFW"/>
+                        <outlet property="onePasswordButton" destination="ckb-da-a3d" id="m9I-qK-Tyj"/>
+                        <outlet property="passwordTextField" destination="ko9-Y8-ZLJ" id="H65-l8-m1k"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cN3-sZ-tFf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1894" y="387"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="zpY-Re-gRK">
