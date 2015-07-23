@@ -20,12 +20,12 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GpT-Vk-02V">
                                 <rect key="frame" x="20" y="104" width="560" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cUk-4G-R1h">
                                 <rect key="frame" x="20" y="142" width="560" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Y0-vC-sF3">
                                 <rect key="frame" x="20" y="180" width="47" height="30"/>
@@ -34,6 +34,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8fV-DP-aCS">
                                 <rect key="frame" x="466" y="180" width="114" height="30"/>
                                 <state key="normal" title="Open 1Password"/>
+                                <connections>
+                                    <action selector="populateFieldsFromOnePassword:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mFL-SP-6d4"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -53,6 +56,11 @@
                     <navigationItem key="navigationItem" title="Sign In" id="Wrd-sZ-LaM">
                         <barButtonItem key="rightBarButtonItem" title="Sign Up" id="sgf-QA-uUM"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="emailTextField" destination="GpT-Vk-02V" id="nIq-S7-NoB"/>
+                        <outlet property="onePasswordButton" destination="8fV-DP-aCS" id="L5J-XN-ft1"/>
+                        <outlet property="passwordTextField" destination="cUk-4G-R1h" id="wA7-d5-x7a"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

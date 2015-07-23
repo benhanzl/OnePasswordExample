@@ -322,6 +322,7 @@
 			baseConfigurationReference = E178FFBF529AF46EBBC0061B /* Pods-OnePasswordExample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = OnePasswordExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.izea.OnePasswordExample;
@@ -334,6 +335,7 @@
 			baseConfigurationReference = 219FB32F6D10F18638B4397C /* Pods-OnePasswordExample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = OnePasswordExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.izea.OnePasswordExample;
