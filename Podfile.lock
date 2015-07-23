@@ -1,0 +1,21 @@
+PODS:
+  - 1PasswordExtension (1.2)
+
+DEPENDENCIES:
+  - 1PasswordExtension (from `https://github.com/AgileBits/onepassword-app-extension.git`,
+    branch `swift2.0`)
+
+EXTERNAL SOURCES:
+  1PasswordExtension:
+    :branch: swift2.0
+    :git: https://github.com/AgileBits/onepassword-app-extension.git
+
+CHECKOUT OPTIONS:
+  1PasswordExtension:
+    :commit: de53f5939f069886341557fa490d3e35e46fad4d
+    :git: https://github.com/AgileBits/onepassword-app-extension.git
+
+SPEC CHECKSUMS:
+  1PasswordExtension: 1e52a7a65f32798eabf37400c43e78e0d38e5ed3
+
+COCOAPODS: 0.38.0
